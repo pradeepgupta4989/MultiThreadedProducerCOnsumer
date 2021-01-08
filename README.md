@@ -20,6 +20,12 @@
   
   DB details : 
    - URL : http://localhost:8888/h2-console 
+   - userName : qwerty, password : qwerty
+   - Schema : 
+      - PRODUCER_CONSUMER_COUNTDTO : Will persist Producer and Consumer thread count.
+      - EXECUTION_TIME_STAMPDTO : Will persist Timestamp whenever Counter value reaches 0 or 100.
+     
+   
   
   
   
