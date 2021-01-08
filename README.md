@@ -30,10 +30,10 @@
    - Dockerfile already created for creating docker image from openjdk:8-jdk-alpine template. 
    - Dockerfile saved in git repo at root path.
    - For creating and deployment of Docker Image use following commands :
-      - docker build -t multithreaded-producer-consumer .       (It will create docker image with )
-      - docker images       (to check if our newly created image listed there)
-      - docker run -p 9090:8888 multithreaded-producer-consumer        (It will create container with application running in to it)
-      - docker container ls -a      (Ensure if container is created and in running status)
+      - **docker build -t multithreaded-producer-consumer . **   (It will create docker image with )
+      - **docker images**  (to check if our newly created image listed there)
+      - **docker run -p 9090:8888 multithreaded-producer-consumer**    (It will create container with application running in to it)
+      - **docker container ls -a**  (Ensure if container is created and in running status)
       
       
  
