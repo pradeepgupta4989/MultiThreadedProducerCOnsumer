@@ -1,7 +1,7 @@
 # MultiThreadedProducerConsumer
-Producer and Consumer threads will execute in multi threaded env to update shared counter variable.
-Number of Producer and Consumer thread counter will be persisted in H2 (In-memory) DB.
-Timestamp of the counter and thread details persisted to H2 (In-memory) DB once counter value reaches 0 or 100.
+- Producer and Consumer threads will execute in multi threaded env to update shared counter variable.
+- Number of Producer and Consumer thread counter will be persisted in H2 (In-memory) DB.
+- Timestamp of the counter and thread details persisted to H2 (In-memory) DB once counter value reaches 0 or 100.
 
 #REST APIs :
 1. POST : http://{SERVER}:{PORT}/producerConsumer/v1/createThreads/{ProducerThreadCount}/{ConsumerThreadCount}
