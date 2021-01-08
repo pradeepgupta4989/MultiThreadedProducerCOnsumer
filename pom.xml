@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.multithread</groupId>
-	<artifactId>producerconsumer</artifactId>
+	<artifactId>multithreaded-producer-consumer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>producerconsumer</name>
+	<name>multithreaded-producer-consumer</name>
 
 	<properties>
 		<java.version>1.8</java.version>
