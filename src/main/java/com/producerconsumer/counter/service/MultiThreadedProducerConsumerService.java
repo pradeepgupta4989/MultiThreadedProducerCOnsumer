@@ -8,7 +8,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import com.producerconsumer.counter.threads.*;
-
+import com.producerconsumer.counter.constants.ProducerConsumerConstants;
 import java.util.Optional;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -30,7 +30,7 @@ public class MultiThreadedProducerConsumerService {
      */
     public void createProducerConsumerThreads(int producerThreadCount, int consumerThreadCount) {
         insertProducerConsumerThreadCount(producerThreadCount, consumerThreadCount);
-        MultithreadedProducerConsumerUtil.counter = new AtomicInteger(INITIAL_COUNTER);
+        MultithreadedProducerConsumerUtil.counter = new AtomicInteger(ProducerConsumerConstants.INITIAL_COUNTER);
         producerExecutorService = Executors.newFixedThreadPool(producerThreadCount);
         consumerExecutorService = Executors.newFixedThreadPool(consumerThreadCount);
 
