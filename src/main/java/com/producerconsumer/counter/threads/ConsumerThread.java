@@ -13,9 +13,9 @@ public class ConsumerThread implements Runnable {
     public void run() {
         try {
             while (true) {
-                MultithreadedProducerConsumerUtil.counter = MultithreadedProducerConsumerUtil.queue.take();
-                MultithreadedProducerConsumerUtil.counter.getAndDecrement();
-                if(MultithreadedProducerConsumerUtil.logAndPersistIfThresholdReached(executionTimeStampRepository,CONSUMER)){
+                MultithreadedProducerConsumerUtil multithreadedProducerConsumerUtil = new MultithreadedProducerConsumerUtil();
+                MultithreadedProducerConsumerUtil.counter.decrementAndGet();
+                if (multithreadedProducerConsumerUtil.logAndPersistIfThresholdReached(executionTimeStampRepository, CONSUMER)) {
                     break;
                 }
             }
