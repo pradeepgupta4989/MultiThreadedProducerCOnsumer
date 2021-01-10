@@ -15,11 +15,11 @@ public class ProducerThread implements Runnable {
     public void run() {
         try {
             while (true) {
-                MultithreadedProducerConsumerUtil.queue.put(MultithreadedProducerConsumerUtil.counter);
-                MultithreadedProducerConsumerUtil.counter.getAndIncrement();
-                if(MultithreadedProducerConsumerUtil.logAndPersistIfThresholdReached(executionTimeStampRepository,PRODUCER)){
-                    break;
-                }
+               MultithreadedProducerConsumerUtil multithreadedProducerConsumerUtil = new MultithreadedProducerConsumerUtil();
+               MultithreadedProducerConsumerUtil.counter.incrementAndGet();
+               if (multithreadedProducerConsumerUtil.logAndPersistIfThresholdReached(executionTimeStampRepository, PRODUCER)) {
+                   break;
+               }
             }
         } catch (InterruptedException ex) {
             log.info("Terminating Producer Thread forcefully");
