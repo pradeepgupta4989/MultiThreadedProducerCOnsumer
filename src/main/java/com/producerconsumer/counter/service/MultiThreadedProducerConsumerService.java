@@ -30,7 +30,7 @@ public class MultiThreadedProducerConsumerService {
      */
     public void createProducerConsumerThreads(int producerThreadCount, int consumerThreadCount) {
         insertProducerConsumerThreadCount(producerThreadCount, consumerThreadCount);
-
+        MultithreadedProducerConsumerUtil.counter = new AtomicInteger(INITIAL_COUNTER);
         producerExecutorService = Executors.newFixedThreadPool(producerThreadCount);
         consumerExecutorService = Executors.newFixedThreadPool(consumerThreadCount);
 
